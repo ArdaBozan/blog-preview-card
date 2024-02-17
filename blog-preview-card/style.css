@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+*{
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --ff: "Figtree", sans-serif;
+
+    --fw-800: 800;
+    --fw-600: 600;
+
+    --fs-primary-heading: 1.7em;
+    --fs-secondary-heading: .9em;
+    --fs: 1em;
+
+    --clr-primary: hsl(47, 88%, 63%);
+
+    --clr-neutral-grey: hsl(0, 0%, 50%);
+    --clr-neutral-black: hsl(0, 0%, 7%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+}
+
+h1{
+    font-size: var(--fs-primary-heading);
+    font-weight: var(--fw-800);
+}
+
+.bold{
+    font-weight: var(--fw-800);
+}
+
+h5{
+    font-size: var(--fs-secondary-heading);
+}
+
+.about-text{
+    font-style: var(--fs);
+    color: var(--clr-neutral-grey);
+}
+
+/* Styling */
+body{
+    font-family: var(--ff);
+    font-style: var(--fs);
+    background-color: var(--clr-primary);
+    font-weight: var(--fw-600);
+    display: grid;
+    place-items: center;
+}
+
+.card-container{
+    display: grid;
+    padding: 1.5em;
+    background-color: var(--clr-neutral-white);
+    border-radius: 3vh;
+    border: 1px solid var(--clr-neutral-black);
+    gap: 1em;
+    box-shadow: .5em .5em;
+    transition: .3s;
+}
+
+.card-img{
+    border-radius: 3vh;
+    margin-inline: auto;
+    min-width: 100%;
+}
+
+.hover-text{
+    background-color: var(--clr-primary);
+    max-width: fit-content;
+    padding: .3em .8em;
+    border-radius: 1vh;
+}
+
+h1{
+    transition: .3s;
+}
+
+.about-text{
+    max-width: 35ch;
+}
+
+.user-container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.avatar{
+    max-width: 9%;
+}
+
+
+/* Hover Effect */
+h1:hover{
+    color: var(--clr-primary);
+    cursor: pointer;
+}
+
+.card-container:hover{
+    box-shadow: .9em .9em;
+    transform: translateX(-.4em) translateY(-.4em);
+}
